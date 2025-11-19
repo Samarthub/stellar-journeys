@@ -8,90 +8,108 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Light theme - soft pastels for kids */
+    --background: 220 40% 98%;
+    --foreground: 230 15% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 230 15% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 230 15% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 270 60% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 200 60% 70%;
+    --secondary-foreground: 230 15% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 30% 94%;
+    --muted-foreground: 230 10% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 280 70% 65%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 270 60% 55%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Galaxy theme colors for kid mode */
+    --galaxy-deep: 270 50% 15%;
+    --galaxy-purple: 270 60% 40%;
+    --galaxy-blue: 230 60% 45%;
+    --galaxy-accent: 280 70% 60%;
+    --star-glow: 50 100% 80%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Parent mode neutral */
+    --parent-bg: 220 25% 97%;
+    --parent-card: 0 0% 100%;
+    --parent-text: 230 15% 25%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark theme - galaxy colors */
+    --background: 270 50% 8%;
+    --foreground: 220 30% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 270 40% 12%;
+    --card-foreground: 220 30% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 270 45% 10%;
+    --popover-foreground: 220 30% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 270 70% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 230 50% 40%;
+    --secondary-foreground: 220 30% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 270 30% 18%;
+    --muted-foreground: 220 20% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 280 75% 65%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 270 30% 20%;
+    --input: 270 30% 20%;
+    --ring: 270 70% 60%;
+
+    /* Galaxy theme enhanced */
+    --galaxy-deep: 270 60% 10%;
+    --galaxy-purple: 270 70% 45%;
+    --galaxy-blue: 230 65% 50%;
+    --galaxy-accent: 280 80% 65%;
+    --star-glow: 50 100% 85%;
   }
+}
+
+/* Galaxy starfield animation */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px hsl(var(--galaxy-accent) / 0.4); }
+  50% { box-shadow: 0 0 30px hsl(var(--galaxy-accent) / 0.8); }
+}
+
+@keyframes train-move {
+  0% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
 }
 
 @layer base {
@@ -101,5 +119,53 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Galaxy background for kid mode */
+  .galaxy-bg {
+    @apply bg-gradient-to-br from-[hsl(var(--galaxy-deep))] via-[hsl(var(--galaxy-purple))] to-[hsl(var(--galaxy-blue))];
+    position: relative;
+  }
+
+  .galaxy-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(2px 2px at 20% 30%, white, transparent),
+      radial-gradient(2px 2px at 60% 70%, white, transparent),
+      radial-gradient(1px 1px at 50% 50%, white, transparent),
+      radial-gradient(1px 1px at 80% 10%, white, transparent),
+      radial-gradient(2px 2px at 90% 60%, white, transparent),
+      radial-gradient(1px 1px at 30% 80%, white, transparent);
+    background-size: 200% 200%;
+    background-position: 0% 0%, 40% 60%, 130% 270%, 70% 100%, 50% 50%, 90% 30%;
+    animation: twinkle 3s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+  }
+
+  .card-glow {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  /* Quiz answer cards */
+  .quiz-answer {
+    @apply rounded-2xl p-6 border-2 transition-all duration-200 cursor-pointer;
+    @apply hover:scale-105 hover:border-primary;
+  }
+
+  .quiz-answer.correct {
+    @apply bg-green-100 border-green-500 dark:bg-green-900/30 dark:border-green-400;
+  }
+
+  .quiz-answer.incorrect {
+    @apply bg-red-100 border-red-500 dark:bg-red-900/30 dark:border-red-400;
   }
 }
